@@ -1,0 +1,93 @@
+/* Estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+header {
+    background-color: #6e6594;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Contenedor principal */
+main {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px
+}
+
+/* Filtros */
+#filtros {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#genero {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#accesos-rapidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Listado de películas */
+#peliculas {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#peliculas li {
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#peliculas li:hover {
+    background-color: #f1f3f5;
+    border-color: #bcb4e4;
+}
+
+/* Botones */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #6e6594;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8b85c7;
+}

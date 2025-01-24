@@ -1,0 +1,13 @@
+[
+    { "titulo": "El Rey León", "genero": "Animación" },
+    { "titulo": "Avengers: Endgame", "genero": "Acción" },
+    { "titulo": "Titanic", "genero": "Romance" },
+    { "titulo": "El Conjuro", "genero": "Terror" },
+    { "titulo": "Shrek", "genero": "Animación" },
+    { "titulo": "John Wick", "genero": "Acción" },
+    { "titulo": "Interestelar", "genero": "Ciencia Ficción" },
+    { "titulo": "Matrix", "genero": "Ciencia Ficción" },
+    { "titulo": "La La Land", "genero": "Musical" },
+    { "titulo": "Joker", "genero": "Drama" },
+    { "titulo": "The Godfather", "genero": "Crimen" }
+]
