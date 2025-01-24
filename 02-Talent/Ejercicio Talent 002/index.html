@@ -9,17 +9,26 @@
 <body>
   <h1>Listado de Películas</h1>
 
+  <div id="contenedor-filtro">
+    <p>
+      <p>Filtrar Peliculas</p>
+      <input type="text" id="input-genero" placeholder="Escribe el género">
+      <button id="filtrar-genero">Filtrar por Género</button>
+    </p>
+    
+  </div>
+
   <div id="contenedor-peliculas">
     <!-- Aquí se cargarán las películas desde el JSON -->
   </div>
 
   <button id="mostrar-titulos">Mostrar Solo Títulos</button>
-  <button id="filtrar-genero">Filtrar por Género</button>
-
+    <!-- Caja de texto para filtrar por género -->
+  
   <div id="contenedor-titulos">
     <!-- Aquí se mostrarán solo los títulos -->
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -33,4 +33,37 @@ body {
   button:hover {
     background-color: #0056b3;
   }
+
+  #contenedor-filtro {
+    display: flex; /* Coloca el input y el botón en una fila */
+    justify-content: center; /* Centra el contenido */
+    margin-top: 20px; /* Espaciado superior */
+
+  }
+  
+  #input-genero {
+    padding:6px;
+    margin-top: 14px;
+    margin-right: 0; /* Espacio entre el input y el botón */
+    font-size: 14px;
+    width: auto; /* Ajusta el tamaño del input */
+    height: 10px;
+    margin-left: 13px;
+  }
+  
+  #filtrar-genero {
+    padding: 8px 16px; /* Espaciado interno del botón */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 11px;
+  }
+  
+  #filtrar-genero:hover {
+    background-color: #0056b3;
+  }
+  
   

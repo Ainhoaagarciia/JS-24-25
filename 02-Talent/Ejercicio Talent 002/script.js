@@ -2,6 +2,7 @@
 const contenedorPeliculas = document.getElementById('contenedor-peliculas');
 const contenedorTitulos = document.getElementById('contenedor-titulos');
 const botonMostrarTitulos = document.getElementById('mostrar-titulos');
+const inputGenero = document.getElementById('input-genero');
 const botonFiltrarGenero = document.getElementById('filtrar-genero');
 
 // Cargar el JSON y mostrar las películas
@@ -34,8 +35,8 @@ botonMostrarTitulos.addEventListener('click', () => {
 botonFiltrarGenero.addEventListener('click', () => {
   if (!window.peliculas) return;
 
-  // Pedir al usuario que ingrese un género
-  const genero = prompt('Introduce el género para filtrar las películas (por ejemplo: Animación, Ciencia Ficción, Acción):');
+  // Obtener el género ingresado por el usuario
+  const genero = inputGenero.value.trim();
 
   if (genero) {
     // Filtrar las películas por el género ingresado
