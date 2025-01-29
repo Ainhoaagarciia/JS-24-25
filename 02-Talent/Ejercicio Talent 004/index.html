@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Free Film </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <header>
+        <a href="#filtros2"> <!-- Este enlace llevará al inicio de la página -->
+            <img src="./imagenes/Logo-FreePelis.png" alt="logo"> 
+        </a>
+        <section id="filtros">
+            <!-- Menú al lado de la imagen -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="#filtros2">Cartelera</a></li>
+                    <li><a href="#seccion-trailer">Próximamente</a></li>
+                    <li><a href="#reseñas">Críticas</a></li>
+                </ul>
+            </nav>
+            <!-- Búsqueda y Ordenación -->
+            <div id="extras">
+                <input type="text" id="buscar" placeholder="Buscar por título..."> <!---Barra de Busqueda-->
+                <button id="buscar-button">Buscar</button>
+                <button id="ordenar-ascendente">Ordenar por Año ↓</button>
+                <button id="ordenar-descendente">Ordenar por Año ↑</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="filtros2">
+            <!-- Filtrar por Género -->
+            <label for="genero">Filtrar Por Género:</label> <!---Etiqueta-->
+            <select id="genero">
+                <option value="todos">Todos</option> <!---Desplegable de Opciones, por defecto Todos, los adicionales se cargarán dinámicamente desde JSON-->
+            </select>
+            <!-- Botones de accesos rápidos -->
+            <div id="accesos-rapidos"></div> <!---Se cargarán dinámicamente botones para filtrar por genero desde JSON (Animacion,Accion...)-->
+        </section>
+        
+        <!-- Listado de Películas -->
+        <section id="listado-peliculas">
+            <ul id="peliculas"></ul>  <!-- Aquí se listarán las películas desde JSON-->
+        </section>
+        <!-- Mensaje cuando no se encuentran películas -->
+
+        <p id="mensaje-estado" style="display: none;">No se encontraron películas con los criterios seleccionados.</p>
+        
+        <!-- Sección de Trailers -->
+        <section id="seccion-trailer">
+            <section id="proximamente">
+                <h2>Próximos Estrenos: Mira los Trailers</h2>
+            </section>
+            <div id="trailers-contenedor">
+                <!-- Primer trailer -->
+                <div class="trailer">
+                    <video controls>
+                        <source src="./imagenes/Wolf Man  Official Teaser.mp4" type="video/mp4">
+                    </video>
+                    <div class="trailer-info">
+                        <h3>Wolf Man</h3>
+                        <p><strong>Año:</strong> 2025</p>
+                        <p><strong>Director:</strong> Michael Sarnoski</p>
+                        <p><strong>Sinopsis:</strong> Un hombre maldito por la luna llena lucha contra su propia naturaleza mientras huye de la sociedad.</p>
+                    </div>
+                </div>
+                
+                <!-- Segundo trailer -->
+                <div class="trailer">
+                    <video controls>
+                        <source src="./imagenes/NOSFERATU  Tráiler Oficial (Universal Studios) - HD.mp4" type="video/mp4">
+                    </video>
+                    <div class="trailer-info">
+                        <h3>Nosferatu</h3>
+                        <p><strong>Año:</strong> 2024</p>
+                        <p><strong>Director:</strong> Robert Eggers</p>
+                        <p><strong>Sinopsis:</strong> Un vampiro acecha un pequeño pueblo mientras un joven intenta detener su reinado de terror.</p>
+                    </div>
+                </div>
+
+                <!-- Tercer trailer -->
+                <div class="trailer">
+                    <video controls>
+                        <source src="./imagenes/Sonic 3_ La película I Tráiler oficial I Paramount Pictures Spain.mp4" type="video/mp4">
+                    </video>
+                    <div class="trailer-info">
+                        <h3>Sonic 3: La Película</h3>
+                        <p><strong>Año:</strong> 2024</p>
+                        <p><strong>Director:</strong> Jeff Fowler </p>
+                        <p><strong>Sinopsis:</strong> Sonic, Tails y Knuckles se enfrentarán al Dr. Eggman antes de que conquiste el mundo. Eggman tendrá un nuevo aliado (Project Shadow).</p>
+                    </div>
+                </div>
+
+                <!-- Cuarto trailer -->
+                <div class="trailer">
+                    <video controls>
+                        <source src="./imagenes/Mufasa_ El Rey León  Teaser Tráiler oficial en castellano  HD.mp4" type="video/mp4">
+                    </video>
+                    <div class="trailer-info">
+                        <h3>Mufasa: El Rey León</h3>
+                        <p><strong>Año:</strong> 2024</p>
+                        <p><strong>Director:</strong> Barry Jenkins</p>
+                        <p><strong>Sinopsis:</strong> Precuela de 'El rey león' (2019). Cuenta la historia de origen del padre de Simba, Mufasa, explorando su infancia al crecer con su hermano Scar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src='script.js'></script>
+</body>
+<footer>
+    <!-- Sección de Reseñas -->
+    <section id="reseñas">
+        <h2>Críticas De Los Usuarios</h2>
+        <div class="contenedor-reseñas">
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 1">
+                <div class="info-reseña">
+                    <h3>María López</h3>
+                    <p>The Dark Knight</p>
+                    <p>Una obra maestra del cine de superhéroes. Con una dirección impecable de Nolan y una actuación legendaria de Heath Ledger como el Joker, la película ofrece una trama profunda y llena de tensión. Un imprescindible.</p>
+                    <div class="calificacion">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 2">
+                <div class="info-reseña">
+                    <h3>Carlos Pérez</h3>
+                    <p>Interstellar</p>
+                    <p>Buena película, aunque esperaba un poco más del final. En general, fue entretenida. La trama es fascinante y visualmente impresionante, pero la conclusión no cumplió completamente con las expectativas.</p>
+                    <div class="calificacion">
+                        ★★★☆☆
+                    </div>
+                </div>
+            </div>
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 3">
+                <div class="info-reseña">
+                    <h3>Ana González</h3>
+                    <p>Titanic</p>
+                    <p>La historia de amor entre Jack y Rose es tan épica y emotiva. Aunque ya la he visto mil veces, sigue siendo una de mis películas favoritas. La mezcla de romance y tragedia es simplemente perfecta.</p>
+                    <div class="calificacion">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 4">
+                <div class="info-reseña">
+                    <h3>Juan Morales</h3>
+                    <p>Star Wars: A New Hope</p>
+                    <p>Es un clásico, no se puede negar, pero algunas escenas me parecieron lentas. El desarrollo de algunos personajes podría haber sido más profundo. Aun así, es entretenida y tiene momentos icónicos.</p>
+                    <div class="calificacion">
+                        ★★★☆☆
+                    </div>
+                </div>
+            </div>
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 5">
+                <div class="info-reseña">
+                    <h3>Lucía Fernández</h3>
+                    <p>Matrix</p>
+                    <p>¡Una película que te hace cuestionar todo! Los efectos de 'bullet time' son revolucionarios y la trama es tan intrigante. No es solo acción, tiene mucha profundidad filosófica. Imprescindible para los fans de la ciencia ficción.</p>
+                    <div class="calificacion">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+            <div class="reseña">
+                <img src="./imagenes/Foto_Usuario.png" alt="Usuario 6">
+                <div class="info-reseña">
+                    <h3>Pedro Ramírez</h3>
+                    <p>Frozen</p>
+                    <p>Es una película visualmente impresionante con una banda sonora increíble. Aunque algunos personajes no tienen mucha profundidad, la relación entre Elsa y Anna es lo que realmente destaca. Ideal para disfrutar en familia.</p>
+                    <div class="calificacion">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</footer>
+</html>
